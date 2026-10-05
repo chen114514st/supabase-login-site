@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chen · Supabase 登录</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <div id="authView">
+      <h1>欢迎回来</h1>
+      <p class="sub">使用 Supabase 真实账号注册或登录</p>
+
+      <form id="authForm">
+        <label>邮箱</label>
+        <input id="email" type="email" placeholder="you@example.com" required>
+
+        <label>密码</label>
+        <input id="password" type="password" placeholder="至少 6 位" minlength="6" required>
+
+        <button id="submitBtn" type="submit">登录</button>
+      </form>
+
+      <button id="toggleBtn" class="link-btn">还没有账号？注册</button>
+      <p id="message" class="message"></p>
+    </div>
+
+    <div id="userView" hidden>
+      <h1>登录成功 🎉</h1>
+      <p class="sub">当前账号</p>
+      <p id="userEmail" class="email"></p>
+      <button id="logoutBtn">退出登录</button>
+    </div>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
